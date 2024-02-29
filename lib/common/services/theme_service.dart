@@ -61,6 +61,13 @@ class LightTheme {
         foregroundColor: MaterialStateProperty.all(
           Colors.white,
         ),
+        shape: MaterialStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(
+              16,
+            ),
+          ),
+        ),
         textStyle: MaterialStateProperty.all(
           const TextStyle(
             color: Colors.white,

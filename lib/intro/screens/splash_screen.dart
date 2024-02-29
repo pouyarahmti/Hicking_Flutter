@@ -1,8 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:hicking/auth/screens/auth_main_screen.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    initApp();
+    super.initState();
+  }
+
+  void initApp() async {
+    Future.delayed(const Duration(seconds: 2), () {
+      context.goNamed(AuthMainScreen.routeName);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
